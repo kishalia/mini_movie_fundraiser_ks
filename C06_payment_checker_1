@@ -1,0 +1,22 @@
+# functions go here
+# function checks that user's payment method (cash or credit)
+# program sends error code  when invalid payment method is entered
+def cash_credit(question):
+    while True:
+        response = input(question).lower()
+        if response == "cash" or response == "ca":
+            return "cash"
+        elif response == "credit" or response == "cr":
+            return "credit"
+        else:
+            print("Sorry. That is not a valid payment method.Please choose cash(ca) or credit (cr)")
+
+
+# main routine goes here
+
+while True:
+    payment_method = cash_credit("Choose a payment method (cash or credit) ").lower()
+
+    print("You have chosen", payment_method, "as your payment method.")
+
+    print("program continues...")
